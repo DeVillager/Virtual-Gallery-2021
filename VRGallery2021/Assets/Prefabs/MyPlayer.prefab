@@ -531,7 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 1.25
   inputAxis: 01000000
-  SprintSpeed: 2
+  SprintSpeed: 4
   SprintInput: 09000000
   StrafeSpeed: 1
   StrafeSprintSpeed: 1.25
