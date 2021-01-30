@@ -33,6 +33,7 @@ public class Dancefloor : MonoBehaviour
 
     private void ChangeColor(int i)
     {
-        _materials[0].color = colors[i];
+        _materials[0].SetColor("_EmissionColor", colors[i]);
+        // _materials[0].color = colors[i];
     }
 }

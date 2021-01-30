@@ -45,7 +45,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0, g: 0.97791195, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.24
   m_Range: 3.2145548
   m_SpotAngle: 69.10118
@@ -142,6 +142,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.39940867
   m_Center: {x: 0, y: -2.415848e-15, z: 0.9}
+--- !u!114 &6680915056850229380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459451620718738924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857724281db487046882428dfa9c64e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.1
+  frequency: 0.3
 --- !u!1001 &5100131874761562148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,6 +321,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be20c7feadbec74697e56722191fb80, type: 3}
+--- !u!1 &8459451620718738924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3720338909105071560, guid: 4be20c7feadbec74697e56722191fb80,
+    type: 3}
+  m_PrefabInstance: {fileID: 5100131874761562148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8459451620718738912 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
