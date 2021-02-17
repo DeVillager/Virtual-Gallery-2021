@@ -1,6 +1,5 @@
-# Atomic Jungle VR Gallery Oculus
+# Kaleidoscopers VR Gallery Oculus
 
-VR Gallery project presenting Mediapolis students' works in Spring 2020. Built for Oculus Quest.
-HTC Vive supported version can be found [here](https://github.com/DeVillager/Virtual-Gallery-2020/releases/tag/1.1)
+VR Gallery project presenting Mediapolis students' works in Spring 2021. Built for Oculus Quest.
 
-#### Homepage: https://www.atomicjungle2020.com/
+#### Homepage: COMING SOON
