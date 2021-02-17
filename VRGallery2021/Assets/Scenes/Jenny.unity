@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_FogColor: {r: 0.86477983, g: 1, b: 0.91986954, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.03
   m_LinearFogStart: 4.7
@@ -6763,7 +6763,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 4.1904e-41, z: 0, w: -0.000000003783498}
+  m_BoundingSphereOverride: {x: 0, y: 7.5550243e+31, z: 6.8887533e+22, w: 7.918309e+34}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7184,7 +7184,7 @@ PrefabInstance:
     - target: {fileID: 3720338908807332455, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_text
-      value: Welcome to the ruins
+      value: OUR BODIES ARE WILD
       objectReference: {fileID: 0}
     - target: {fileID: 3720338908807332455, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -7214,7 +7214,7 @@ PrefabInstance:
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.134
+      value: 46.479
       objectReference: {fileID: 0}
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -7259,7 +7259,7 @@ PrefabInstance:
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 61.651
+      value: 62.189
       objectReference: {fileID: 0}
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -7309,7 +7309,7 @@ PrefabInstance:
     - target: {fileID: 3720338909105071560, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_Name
-      value: ForesetInfo
+      value: RUinInfo
       objectReference: {fileID: 0}
     - target: {fileID: 9208167294439982619, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}

@@ -41,11 +41,11 @@ GameObject:
   - component: {fileID: 2533341406481556711}
   - component: {fileID: 2533341406481556710}
   - component: {fileID: 2533341406481556705}
-  - component: {fileID: 2533341406481556704}
   - component: {fileID: 637249091932406818}
   - component: {fileID: 1927547610}
   - component: {fileID: 1927547611}
   - component: {fileID: 7864209590576785489}
+  - component: {fileID: 8240982611862442105}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -119,19 +119,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2533341406481556704
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2533341406481556707}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6277789, y: 0.5163025, z: 1.297105}
-  m_Center: {x: 0, y: 0.24184881, z: 0}
 --- !u!54 &637249091932406818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,7 +133,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1927547610
 MonoBehaviour:
@@ -176,9 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fcecec82589ff45af561686cdb22a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDir: 0
   rb: {fileID: 637249091932406818}
   sailTime: 1
   rotations: 180
+  rotationChance: 0.2
   speed: 1
 --- !u!114 &7864209590576785489
 MonoBehaviour:
@@ -236,6 +225,20 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+--- !u!136 &8240982611862442105
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533341406481556707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7662709711027830644
 GameObject:
   m_ObjectHideFlags: 0
