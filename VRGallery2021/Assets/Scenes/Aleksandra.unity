@@ -3494,6 +3494,15 @@ PrefabInstance:
       propertyPath: RainMistHeight
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      propertyPath: WindSoundVolumeModifier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      propertyPath: RainSoundAudioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: c693f92cca718b44c964ab46a79f8abf,
+        type: 2}
     - target: {fileID: 19928108, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -16622,7 +16631,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: ac3af3baa25309b478cc169c6592e3dc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d5b98424e9f8f642b7759a95409b684, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
