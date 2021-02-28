@@ -7,6 +7,7 @@ public class MobileSwipe : MonoBehaviour
 {
     public AnnaMobile mobile;
     public swipeDirection swipeDir;
+
     public enum swipeDirection
     {
         Left,
@@ -17,6 +18,7 @@ public class MobileSwipe : MonoBehaviour
     {
         if (other.CompareTag("Thumb"))
         {
+            Debug.Log("collided with " + other.gameObject);
             if (swipeDir == swipeDirection.Left)
             {
                 mobile.PreviousImage();

@@ -21,11 +21,9 @@ public abstract class EventTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log("collided with " + other.gameObject);
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("MainCamera"))
         {
-            // if (((1 << other.gameObject.layer) & mask) != 0)
-            // {
-            // }
             OnTriggerEnterEvent.Invoke();
         }
     }

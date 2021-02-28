@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.18
+  m_AmbientIntensity: 0.05
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
@@ -750,7 +750,7 @@ PrefabInstance:
     - target: {fileID: 8254957290593913285, guid: dcbb0215b3d5e5c48863db54c81ab2ed,
         type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 9220462389471008308, guid: dcbb0215b3d5e5c48863db54c81ab2ed,
         type: 3}
@@ -1249,6 +1249,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1044841859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2755629240224692801, guid: 0729932ffe0160d43a72645ff4666ce2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1953253023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &1044841866
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044841859}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 2
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1059413724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1125223868
 Light:
   m_ObjectHideFlags: 0
@@ -1415,7 +1482,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.5633e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.8783e-41, z: 0, w: 9.5625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1445,8 +1512,8 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Don''t get lost in the forest.
 
-        Follow the sound to find your
-        way back'
+        Follow the violin sound to
+        find your way back'
       objectReference: {fileID: 0}
     - target: {fileID: 3720338908807332455, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -1466,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 2.252
       objectReference: {fileID: 0}
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -1511,7 +1578,7 @@ PrefabInstance:
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.758
       objectReference: {fileID: 0}
     - target: {fileID: 3720338909105071556, guid: 4be20c7feadbec74697e56722191fb80,
         type: 3}
@@ -2899,16 +2966,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 13dc851b3c571f8458949bffc943421a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.493
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 200
+  DopplerLevel: 0
+  MinDistance: 2.65
+  MaxDistance: 49.59
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2958,7 +3025,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.013333334
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3240,10 +3307,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 5100131876063964440, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.32704395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100131876063964440, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100131876063964440, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9254193
+      objectReference: {fileID: 0}
     - target: {fileID: 5100131876063964441, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.234
+      value: 3.677
       objectReference: {fileID: 0}
     - target: {fileID: 5100131876063964441, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
         type: 3}
@@ -3253,7 +3335,7 @@ PrefabInstance:
     - target: {fileID: 5100131876063964441, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.121
+      value: 1.654
       objectReference: {fileID: 0}
     - target: {fileID: 5100131876063964441, guid: c03a9e0176f97f64fb53bd27e8f4a18b,
         type: 3}

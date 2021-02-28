@@ -24,12 +24,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966750450351907637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.516, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071067, z: 7.054107e-24, w: -8.6595606e-17}
+  m_LocalPosition: {x: -0.7774577, y: 0, z: 0}
+  m_LocalScale: {x: 0.43935353, y: 10.096853, z: 10.096851}
   m_Children: []
-  m_Father: {fileID: 9180943777090025365}
-  m_RootOrder: 1
+  m_Father: {fileID: 1562933784468475266}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &5328789456719965438
 Light:
@@ -92,6 +92,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!64 &2098460970292557790
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232509241275651896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6239881831769578202, guid: 0a7a4ff57a3a1504ca811394157361e9, type: 3}
 --- !u!1 &9180943777090025364
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +134,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1562933784468475266}
-  - {fileID: 8158804059937785538}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,6 +206,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a7a4ff57a3a1504ca811394157361e9, type: 3}
+--- !u!1 &2232509241275651896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7a4ff57a3a1504ca811394157361e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1313395787040696937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1562933784468475266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a7a4ff57a3a1504ca811394157361e9,

@@ -6,17 +6,18 @@ public class AnnaMobile : MonoBehaviour
 {
     public Material[] annagramImages;
     public Renderer screenRend;
-    public int imgIndex = 0;
-    
+    public int imgIndex;
 
-    
     void Start()
     {
+        imgIndex = 0;
     }
 
     private void ChangeImage(int index)
     {
-        imgIndex = index % annagramImages.Length;
+        Debug.Log("annaimages length " + annagramImages.Length + "imgindex " + imgIndex);
+        imgIndex = (imgIndex + annagramImages.Length) % annagramImages.Length;
+        Debug.Log("Changed img to " + annagramImages[imgIndex].name);
         screenRend.material = annagramImages[imgIndex];
     }
 

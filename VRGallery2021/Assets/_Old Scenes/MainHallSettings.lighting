@@ -6,7 +6,7 @@ LightingSettings:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ElinaLights
+  m_Name: MainHallSettings
   serializedVersion: 2
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
@@ -17,8 +17,8 @@ LightingSettings:
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
   m_BakeBackend: 1
-  m_LightmapMaxSize: 512
-  m_BakeResolution: 0.5
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
   m_Padding: 2
   m_TextureCompression: 1
   m_AO: 0
@@ -32,7 +32,7 @@ LightingSettings:
   m_LightmapParameters: {fileID: 0}
   m_ExportTrainingData: 0
   m_TrainingDataDestination: TrainingData
-  m_RealtimeResolution: 0.5
+  m_RealtimeResolution: 2
   m_ForceWhiteAlbedo: 0
   m_ForceUpdates: 0
   m_FinalGather: 0
