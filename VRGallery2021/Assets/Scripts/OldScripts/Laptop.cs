@@ -1,23 +1,27 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Video;
 
 public class Laptop : MonoBehaviour
 {
     private VideoPlayer _videoPlayer;
+    private AudioSource _audioSource;
 
-    // private AudioSource _audioSource;
     // public float defaultVideoSpeed = 1;
     // public float maxPlayBackSpeed = 4;
-    public Transform _playerTransform;
+    // public Transform _playerTransform;
 
     // public float volumeScale = 1;
-    [SerializeField] private float videoSpeed = 1;
+    [SerializeField] private float videoSpeedNormal = 1;
+    [SerializeField] private float videoSpeedFast = 2;
+    [SerializeField] private float audioVolumeNormal = 0.35f;
+    [SerializeField] private float audioVolumeClose = 1f;
 
     protected void Awake()
     {
         // base.Awake();
         _videoPlayer = GetComponent<VideoPlayer>();
-        // _audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         PlayVideo();
     }
 
@@ -31,18 +35,36 @@ public class Laptop : MonoBehaviour
         _videoPlayer.Stop();
     }
 
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        _videoPlayer.playbackSpeed = Mathf.Clamp(videoSpeed / DistanceToPlayer(), 0.25f, 4f);
-        // _audioSource.volume = 1 / DistanceToPlayer() * volumeScale;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _videoPlayer.playbackSpeed = videoSpeedFast;
+            _audioSource.volume = audioVolumeClose;
+        }
     }
 
-    private float DistanceToPlayer()
+    private void OnTriggerExit(Collider other)
     {
-        if (_playerTransform != null)
+        if (other.gameObject.CompareTag("Player"))
         {
-            return Vector3.Distance(transform.position, _playerTransform.position);
+            _videoPlayer.playbackSpeed = videoSpeedNormal;
+            _audioSource.volume = audioVolumeNormal;
         }
-        return 1;
     }
+
+    // private void FixedUpdate()
+    // {
+    //     // _videoPlayer.playbackSpeed = Mathf.Clamp(videoSpeed / DistanceToPlayer(), 0.25f, 4f);
+    //     // _audioSource.volume = 1 / DistanceToPlayer() * volumeScale;
+    // }
+
+    // private float DistanceToPlayer()
+    // {
+    //     if (_playerTransform != null)
+    //     {
+    //         return Vector3.Distance(transform.position, _playerTransform.position);
+    //     }
+    //     return 1;
+    // }
 }

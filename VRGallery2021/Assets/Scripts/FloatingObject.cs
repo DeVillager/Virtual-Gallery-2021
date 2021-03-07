@@ -27,7 +27,7 @@ namespace VRGallery
 
         private void Float()
         {
-            if (transform.position.y < waterHeight)
+            if ( transform.position.y < waterHeight)
             {
                 float displacementMultiplier =
                     Mathf.Clamp01(-(transform.position.y - waterHeight) / depthBeforeSubmerged) *

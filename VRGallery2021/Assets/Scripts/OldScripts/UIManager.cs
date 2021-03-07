@@ -13,18 +13,18 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        canvas.SetActive(true);
-        _anim = GetComponent<Animator>();
+        // if (instance != null)
+        // {
+        //     Destroy(gameObject);
+        // }
+        // else
+        // {
+        //     instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        //
+        // canvas.SetActive(true);
+        // _anim = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine(DisableSceneChangeFOrSeconds(3f));
-        // ShadeInScreen();
+        ShadeInScreen();
     }
 
     private IEnumerator DisableSceneChangeFOrSeconds(float t)

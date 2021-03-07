@@ -150,7 +150,7 @@ MonoBehaviour:
   rb: {fileID: 637249091932406818}
   depthBeforeSubmerged: 0
   displacementAmount: 3
-  waterHeight: 0.95
+  waterHeight: 1.4
 --- !u!114 &1927547611
 MonoBehaviour:
   m_ObjectHideFlags: 0
