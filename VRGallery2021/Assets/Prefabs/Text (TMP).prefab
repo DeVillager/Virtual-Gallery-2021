@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ArtistName
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39166b809ab9e5b41b8af2c2211f3848, type: 2}
-  m_sharedMaterial: {fileID: -4467911820438220418, guid: 39166b809ab9e5b41b8af2c2211f3848,
+  m_fontAsset: {fileID: 11400000, guid: a9ae666b49c610b4cbe11b70e92eb41a, type: 2}
+  m_sharedMaterial: {fileID: 8889132534827356551, guid: a9ae666b49c610b4cbe11b70e92eb41a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
+  m_fontSize: 0.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

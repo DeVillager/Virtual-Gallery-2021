@@ -7,7 +7,7 @@ public class AnnaMobile : MonoBehaviour
     public Material[] annagramImages;
     public Renderer screenRend;
     public int imgIndex;
-
+    public AudioSource audioSource;
     void Start()
     {
         imgIndex = 0;
@@ -15,6 +15,7 @@ public class AnnaMobile : MonoBehaviour
 
     private void ChangeImage(int index)
     {
+        audioSource.Play();
         Debug.Log("annaimages length " + annagramImages.Length + "imgindex " + imgIndex);
         imgIndex = (imgIndex + annagramImages.Length) % annagramImages.Length;
         Debug.Log("Changed img to " + annagramImages[imgIndex].name);

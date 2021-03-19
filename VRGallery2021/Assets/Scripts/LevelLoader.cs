@@ -6,18 +6,26 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : EventTrigger
 {
     public String defaulLevel;
-    
+
     public void LoadLevel()
     {
         LoadLevel(defaulLevel);
     }
-    
+
     public void LoadLevel(string level)
     {
-        Debug.Log("Loading level " + level);
-        SceneManager.LoadScene(level);
+        if (level == "Exit")
+        {
+            Debug.Log("Quitting gallery");
+            Application.Quit();
+        }
+        else
+        {
+            Debug.Log("Loading level " + level);
+            SceneManager.LoadScene(level);
+        }
     }
-    
+
     public void LoadNextLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
