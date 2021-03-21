@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using BNG;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : EventTrigger
 {
     public String defaulLevel;
+    public float delayTime = 1f;
 
     public void LoadLevel()
     {
@@ -22,8 +25,15 @@ public class LevelLoader : EventTrigger
         else
         {
             Debug.Log("Loading level " + level);
-            SceneManager.LoadScene(level);
+            FindObjectOfType<ScreenFader>()?.DoFadeIn();
+            StartCoroutine(LoadDelayed(level, delayTime));
         }
+    }
+
+    public IEnumerator LoadDelayed(string level, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(level);
     }
 
     public void LoadNextLevel()

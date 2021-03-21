@@ -3244,7 +3244,7 @@ PrefabInstance:
     - target: {fileID: 8943029003260666204, guid: 13c544b82f9649e44a7a4e747df90960,
         type: 3}
       propertyPath: videoSpeedFast
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8943029003260666204, guid: 13c544b82f9649e44a7a4e747df90960,
         type: 3}

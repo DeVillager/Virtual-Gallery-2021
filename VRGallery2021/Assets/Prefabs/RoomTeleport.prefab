@@ -66,6 +66,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   defaulLevel: 
+  delayTime: 0.5
 --- !u!65 &2010571470346889550
 BoxCollider:
   m_ObjectHideFlags: 0
