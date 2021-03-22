@@ -1062,8 +1062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeOnSceneLoaded: 1
   FadeColor: {r: 0, g: 0, b: 0, a: 0.9882353}
-  FadeInSpeed: 5
-  FadeOutSpeed: 5
+  FadeInSpeed: 10
+  FadeOutSpeed: 10
   SceneFadeInDelay: 0
 --- !u!1 &2755629240224692809
 GameObject:

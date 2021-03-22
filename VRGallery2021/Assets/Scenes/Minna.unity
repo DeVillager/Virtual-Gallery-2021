@@ -3587,7 +3587,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6230,6 +6230,12 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.154
       objectReference: {fileID: 0}
+    - target: {fileID: 8254957290593913285, guid: dcbb0215b3d5e5c48863db54c81ab2ed,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: fbb6b35adf52b064d9e8097a79293e1a,
+        type: 2}
     - target: {fileID: 9220462389471008308, guid: dcbb0215b3d5e5c48863db54c81ab2ed,
         type: 3}
       propertyPath: m_Name

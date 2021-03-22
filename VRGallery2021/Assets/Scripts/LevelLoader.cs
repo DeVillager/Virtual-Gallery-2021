@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : EventTrigger
 {
     public String defaulLevel;
-    public float delayTime = 1f;
+    private float delayTime = 0.1f;
+    
 
     public void LoadLevel()
     {
@@ -26,7 +27,24 @@ public class LevelLoader : EventTrigger
         {
             Debug.Log("Loading level " + level);
             FindObjectOfType<ScreenFader>()?.DoFadeIn();
-            StartCoroutine(LoadDelayed(level, delayTime));
+            // StartCoroutine(LoadDelayed(level, delayTime));
+            StartCoroutine(LoadYourAsyncScene(level));
+        }
+    }
+    
+    public IEnumerator LoadYourAsyncScene(string level)
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+        Resources.UnloadUnusedAssets();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 
