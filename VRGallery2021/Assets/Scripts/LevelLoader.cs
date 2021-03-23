@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using BNG;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class LevelLoader : EventTrigger
 {
     public String defaulLevel;
     private float delayTime = 0.1f;
-    
+
 
     public void LoadLevel()
     {
@@ -23,6 +24,13 @@ public class LevelLoader : EventTrigger
             Debug.Log("Quitting gallery");
             Application.Quit();
         }
+        else if (level == "MainRoom")
+        {
+            Debug.Log("Loading level " + level);
+            FindObjectOfType<ScreenFader>()?.DoFadeIn();
+            // StartCoroutine(LoadDelayed(level, delayTime));
+            StartCoroutine(LoadYourAsyncScene("ClearMemory"));
+        }
         else
         {
             Debug.Log("Loading level " + level);
@@ -31,19 +39,18 @@ public class LevelLoader : EventTrigger
             StartCoroutine(LoadYourAsyncScene(level));
         }
     }
-    
+
     public IEnumerator LoadYourAsyncScene(string level)
     {
-        // The Application loads the Scene in the background as the current Scene runs.
-        // This is particularly good for creating loading screens.
-        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
-        // a sceneBuildIndex of 1 as shown in Build Settings.
         Resources.UnloadUnusedAssets();
+        DestroyEverything();
+        System.GC.Collect();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
+            // yield return new WaitForSecondsRealtime(0.05f);
             yield return null;
         }
     }
@@ -67,6 +74,20 @@ public class LevelLoader : EventTrigger
         else
         {
             Debug.Log("Final level reached");
+        }
+    }
+
+    public void DestroyEverything()
+    {
+        List<GameObject> rootObjects = new List<GameObject>();
+        Scene scene = SceneManager.GetActiveScene();
+        scene.GetRootGameObjects(rootObjects);
+        foreach (GameObject go in rootObjects)
+        {
+            if (!go.CompareTag("Exit"))
+            {
+                Destroy(go);
+            }
         }
     }
 }
