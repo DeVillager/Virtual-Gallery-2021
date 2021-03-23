@@ -5,6 +5,7 @@ using BNG;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class LevelLoader : EventTrigger
 {
@@ -24,13 +25,6 @@ public class LevelLoader : EventTrigger
             Debug.Log("Quitting gallery");
             Application.Quit();
         }
-        else if (level == "MainRoom")
-        {
-            Debug.Log("Loading level " + level);
-            FindObjectOfType<ScreenFader>()?.DoFadeIn();
-            // StartCoroutine(LoadDelayed(level, delayTime));
-            StartCoroutine(LoadYourAsyncScene("ClearMemory"));
-        }
         else
         {
             Debug.Log("Loading level " + level);
@@ -38,12 +32,21 @@ public class LevelLoader : EventTrigger
             // StartCoroutine(LoadDelayed(level, delayTime));
             StartCoroutine(LoadYourAsyncScene(level));
         }
+        // else if (level == "MainRoom")
+        // {
+        //     Debug.Log("Loading level " + level);
+        //     FindObjectOfType<ScreenFader>()?.DoFadeIn();
+        //     // StartCoroutine(LoadDelayed(level, delayTime));
+        //     StartCoroutine(LoadYourAsyncScene("ClearMemory"));
+        // }
     }
 
     public IEnumerator LoadYourAsyncScene(string level)
     {
+        StopAllAnimations();
+        StopAllVideos();
         Resources.UnloadUnusedAssets();
-        DestroyEverything();
+        // DestroyEverything();
         System.GC.Collect();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
 
@@ -76,6 +79,27 @@ public class LevelLoader : EventTrigger
             Debug.Log("Final level reached");
         }
     }
+    
+    public void StopAllAnimations()
+    {
+        Animator[] animators = GetComponents<Animator>();
+        foreach (Animator animator in animators)
+        {
+            animator.enabled = false;
+        }
+    }
+    
+        
+    public void StopAllVideos()
+    {
+        VideoPlayer[] videos = GetComponents<VideoPlayer>();
+        foreach (VideoPlayer video in videos)
+        {
+            video.Stop();
+        }
+    }
+    
+    
 
     public void DestroyEverything()
     {
