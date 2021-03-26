@@ -14,7 +14,6 @@ public class SceneLoader : Interact
         base.Use();
         if (Player.instance.interactOnFocus == this && UIManager.instance.sceneChangeEnabled)
         {
-            SoundPlayer.instance.Play("warp");
             // UIManager.instance.ShadeOutScreen();
             // SceneManager.LoadScene(loadScene);
             StartCoroutine(LoadSceneDelayed());

@@ -30,7 +30,6 @@ public class BlobInitializer : MonoBehaviour
             created.transform.rotation = Quaternion.Euler(Random.Range(minRotation, maxRotation), Random.Range(minRotation, maxRotation), Random.Range(minRotation, maxRotation));
             created.transform.localScale = Vector3.one * Random.Range(minScale, maxScale);
             created.transform.SetParent(parent);
-            created.GetComponent<Duplicate>().original = false;
         }
     }
 

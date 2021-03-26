@@ -48,8 +48,4 @@ public class CreateArtistRooms : MonoBehaviour
         // PlayBlobSound();
     }
 
-    public void PlayBlobSound()
-    {
-        SoundPlayer.instance.Play("Blob");
-    }
 }

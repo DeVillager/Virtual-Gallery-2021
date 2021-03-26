@@ -50,8 +50,4 @@ public class CreateArtistInfos : MonoBehaviour
         // created.GetComponent<Duplicate>().original = false;
     }
 
-    public void PlayBlobSound()
-    {
-        SoundPlayer.instance.Play("Blob");
-    }
 }

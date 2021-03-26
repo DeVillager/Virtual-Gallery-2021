@@ -23,7 +23,6 @@ public class RevealText : MonoBehaviour
     public void RevealMore()
     {
         Debug.Log("revealed more");
-        SoundPlayer.instance.Play("waterDroplet2");
         audioSource.PlayOneShot(audioSource.clip);
         if (index < sprites.Length)
         {

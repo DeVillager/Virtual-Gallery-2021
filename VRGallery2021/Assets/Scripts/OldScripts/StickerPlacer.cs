@@ -33,7 +33,6 @@ public class StickerPlacer : MonoBehaviour
         if ((leftHandTriggered || rightHandTriggered) && wasHit)
         {
             Debug.Log("Sticker placed");
-            SoundPlayer.instance.Play("sticker");
             PlaceSticker();
         }
 

@@ -10,8 +10,17 @@ using UnityEngine.Video;
 public class LevelLoader : EventTrigger
 {
     public String defaulLevel;
-    private float delayTime = 0.1f;
+    private float delayTime = 0.2f;
+    private bool loading = false;
+    private DisableMovement movementDisabler;
+    private GameObject myPlayer;
 
+    private void Start()
+    {
+        movementDisabler = FindObjectOfType<DisableMovement>();
+        myPlayer = movementDisabler.gameObject;
+        Resources.UnloadUnusedAssets();
+    }
 
     public void LoadLevel()
     {
@@ -20,37 +29,30 @@ public class LevelLoader : EventTrigger
 
     public void LoadLevel(string level)
     {
-        if (level == "Exit")
+        if (!loading)
         {
-            Debug.Log("Quitting gallery");
-            Application.Quit();
+            loading = true;
+            if (level == "Exit")
+            {
+                Application.Quit();
+            }
+            else
+            {
+                FindObjectOfType<ScreenFader>()?.DoFadeIn();
+                StopAllAnimations();
+                StopAllVideos();
+                // DestroyEverything();
+                movementDisabler.DisablePlayerController();
+                
+                GC.Collect();
+                StartCoroutine(LoadDelayed(level, delayTime));
+            }
         }
-        else
-        {
-            Debug.Log("Loading level " + level);
-            FindObjectOfType<ScreenFader>()?.DoFadeIn();
-            // StartCoroutine(LoadDelayed(level, delayTime));
-            StartCoroutine(LoadYourAsyncScene(level));
-        }
-        // else if (level == "MainRoom")
-        // {
-        //     Debug.Log("Loading level " + level);
-        //     FindObjectOfType<ScreenFader>()?.DoFadeIn();
-        //     // StartCoroutine(LoadDelayed(level, delayTime));
-        //     StartCoroutine(LoadYourAsyncScene("ClearMemory"));
-        // }
     }
 
     public IEnumerator LoadYourAsyncScene(string level)
     {
-        StopAllAnimations();
-        StopAllVideos();
-        Resources.UnloadUnusedAssets();
-        // DestroyEverything();
-        System.GC.Collect();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
-
-        // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
             // yield return new WaitForSecondsRealtime(0.05f);
@@ -61,25 +63,10 @@ public class LevelLoader : EventTrigger
     public IEnumerator LoadDelayed(string level, float delay)
     {
         yield return new WaitForSeconds(delay);
+        DestroyPlayer();
         SceneManager.LoadScene(level);
     }
 
-    public void LoadNextLevel()
-    {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
-        Debug.Log(currentLevelIndex + ":" + lastSceneIndex);
-        if (currentLevelIndex < lastSceneIndex)
-        {
-            Debug.Log("Loading next level");
-            SceneManager.LoadScene(currentLevelIndex + 1);
-        }
-        else
-        {
-            Debug.Log("Final level reached");
-        }
-    }
-    
     public void StopAllAnimations()
     {
         Animator[] animators = GetComponents<Animator>();
@@ -88,8 +75,8 @@ public class LevelLoader : EventTrigger
             animator.enabled = false;
         }
     }
-    
-        
+
+
     public void StopAllVideos()
     {
         VideoPlayer[] videos = GetComponents<VideoPlayer>();
@@ -98,8 +85,7 @@ public class LevelLoader : EventTrigger
             video.Stop();
         }
     }
-    
-    
+
 
     public void DestroyEverything()
     {
@@ -113,5 +99,10 @@ public class LevelLoader : EventTrigger
                 Destroy(go);
             }
         }
+    }
+    
+    public void DestroyPlayer()
+    {
+        Destroy(myPlayer);
     }
 }
