@@ -9,4 +9,5 @@ Installation:
 - Enable Developer mode in your Oculus Quest (https://developer.oculus.com/documentation/native/android/mobile-device-setup/)
 - Connect the VR glasses into your PC with USB-C
 - Download SideQuest and install the .apk file to your glasses with it (https://sidequestvr.com/setup-howto)
-- VR Gallery 2021 can be found under Applications > Unknown Sources in your Quest. Enjoy!
+- VR Gallery 2021 can be found under Applications > Unknown Sources in your Quest.
+- Enjoy the VR Gallery!
