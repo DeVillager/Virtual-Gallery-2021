@@ -2,7 +2,7 @@
 
 VR Gallery project presenting Mediapolis Fine Arts students' works in Spring 2021.
 Built with Unity for Oculus Quest.
-#### Homepage: https://www.kaleidoscopers2021.com/vr-gallery
+#### Video: https://youtu.be/WRC73CDsm-o
 
 Installation:
 - Download the vrg_kaleidoscopers.apk file from the Releases
